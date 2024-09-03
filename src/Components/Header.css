@@ -1,0 +1,36 @@
+.chatbot-header {
+    padding: 15px;
+    background-color: transparent;
+  }
+
+  .top-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .icons{
+    color: gray;
+    cursor: pointer;
+  }
+
+  .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    p{
+        margin: 0;
+        color: gray;
+        font-weight: 500;
+    }
+    h2{
+        margin: 0;
+    }
+  }

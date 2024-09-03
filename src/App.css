@@ -1,0 +1,114 @@
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatbot-container {
+  width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 600px;
+}
+
+.chatbot-body {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+.chatbot-body::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+.chat-message {
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-message.bot {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
+.chat-message.bot svg {
+  height: 100%;
+  width: 12px;
+  margin-left: 5px;
+}
+
+.chat-message.user {
+  background-color: #7c37fe;
+  color: white;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+}
+
+.chat-message.user input {
+  background-color: #7c37fe;
+  color: white;
+  border: none;
+  padding: 2px 5px;
+}
+
+.icon-container {
+  display: flex;
+  gap: 4px;
+  margin-right: 10px;
+}
+
+.icon-container svg {
+  height: 12px;
+  width: 12px;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  font-size: 20px;
+  /* Increase the size of the icons */
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.user-icon {
+  color: white;
+  /* Make the user's icons white */
+}
+
+.bot-icon {
+  color: #555;
+  /* Keep the bot's icons gray */
+}
+
+.message-text {
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 500px) {
+  .chatbot-container {
+    height: 100vh;
+    width: 100vw;
+  }
+}
